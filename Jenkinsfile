@@ -43,7 +43,7 @@ pipeline {
                         skopeoToken = openshift.raw("sa get-token jenkins").out.trim()
                     }
                     }
-                    echo "got skopeotoken"
+                    echo "got skopeotoken" + skopeoToken
                     imageTag = getVersionFromPom()
                 }
             }
